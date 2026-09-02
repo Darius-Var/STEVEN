@@ -1,0 +1,6 @@
+{
+  "name": "BC Freezer - Commercial Refrigeration Solutions",
+  "description": "Professional commercial refrigeration installation, repair, and preventive maintenance across British Columbia.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

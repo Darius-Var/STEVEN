@@ -36,32 +36,43 @@ export const BrandsSection: React.FC = () => {
                 id={`brand-card-${brand.name.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
                 onMouseEnter={() => setActiveBrand(brand.name)}
                 onClick={() => setActiveBrand(isSelected ? null : brand.name)}
-                className={`p-6 rounded-2xl border transition-all duration-300 flex flex-col justify-between cursor-pointer text-left ${
+                className={`group p-5 rounded-2xl border transition-all duration-300 flex flex-col justify-between cursor-pointer text-left ${
                   isSelected
-                    ? 'bg-slate-800 border-cyan-400 shadow-lg shadow-cyan-950/50 scale-[1.02]'
-                    : 'bg-slate-950/70 border-slate-800 hover:border-slate-700 hover:bg-slate-850'
+                    ? 'bg-slate-850 border-cyan-400 shadow-xl shadow-cyan-950/50 scale-[1.02]'
+                    : 'bg-slate-950/80 border-slate-800 hover:border-slate-700 hover:bg-slate-900'
                 }`}
               >
                 <div>
-                  {/* Brand Display Badge */}
-                  <div className="h-12 flex items-center justify-between">
-                    <span className="text-xl sm:text-2xl font-extrabold tracking-wider text-white font-mono uppercase bg-slate-900 px-3 py-1.5 rounded-lg border border-slate-700/80">
-                      {brand.logoText}
-                    </span>
-                    <span className="h-2 w-2 rounded-full bg-cyan-400" />
+                  {/* Brand Display Logo with Crisp Clean Background for Perfect Contrast */}
+                  <div className="h-20 w-full flex items-center justify-center p-3 rounded-xl bg-white shadow-sm border border-slate-200/40 relative overflow-hidden transition-all duration-200 group-hover:shadow-md">
+                    {brand.logoUrl ? (
+                      <img
+                        src={brand.logoUrl}
+                        alt={`${brand.name} logo`}
+                        className="max-h-14 max-w-[90%] w-auto object-contain select-none"
+                        loading="lazy"
+                      />
+                    ) : (
+                      <span className="text-base font-extrabold tracking-wider text-slate-800 font-mono uppercase">
+                        {brand.logoText}
+                      </span>
+                    )}
+                    <span className={`absolute top-2.5 right-2.5 h-2 w-2 rounded-full transition-all ${
+                      isSelected ? 'bg-cyan-500 scale-125' : 'bg-slate-300 group-hover:bg-cyan-400'
+                    }`} />
                   </div>
 
-                  <h3 className="mt-4 text-sm font-bold text-cyan-300 tracking-tight">
+                  <h3 className="mt-4 text-sm font-bold text-white group-hover:text-cyan-300 transition-colors tracking-tight">
                     {brand.name}
                   </h3>
-                  <p className="text-xs text-slate-400 mt-1 line-clamp-2">
+                  <p className="text-xs text-slate-400 mt-1 line-clamp-2 leading-relaxed">
                     {brand.category}
                   </p>
                 </div>
 
                 <div className="mt-4 pt-3 border-t border-slate-800/80 flex items-center justify-between text-[11px] text-slate-400">
-                  <span>Factory Direct OEM</span>
-                  <CheckCircle2 className="w-3.5 h-3.5 text-cyan-400" />
+                  <span className="group-hover:text-slate-300 transition-colors">Factory Direct OEM</span>
+                  <CheckCircle2 className={`w-3.5 h-3.5 transition-colors ${isSelected ? 'text-cyan-400' : 'text-slate-500 group-hover:text-cyan-400'}`} />
                 </div>
               </div>
             );

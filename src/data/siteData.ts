@@ -121,49 +121,57 @@ export const BRANDS_DATA: BrandPartner[] = [
     name: 'Bohn',
     category: 'Commercial Unit Coolers & Condensers',
     description: 'Industry-standard commercial walk-in evaporator coils and air-cooled condensing units.',
-    logoText: 'BOHN'
+    logoText: 'BOHN',
+    logoUrl: '/logos/bohn.png'
   },
   {
     name: 'KeepRite',
     category: 'Refrigeration Systems & Coils',
     description: 'Rugged, high-capacity commercial condensing units and engineered unit coolers.',
-    logoText: 'KeepRite'
+    logoText: 'KeepRite',
+    logoUrl: '/logos/keeprite.png'
   },
   {
     name: 'Heatcraft',
     category: 'Worldwide Refrigeration Solutions',
     description: 'Advanced refrigeration systems with intelligent defrost control and high energy savings.',
-    logoText: 'Heatcraft'
+    logoText: 'Heatcraft',
+    logoUrl: '/logos/heatcraft.png'
   },
   {
     name: 'Danfoss',
     category: 'Valves, Controls & Compressors',
     description: 'Precision electronic expansion valves, pressure switches, and digital system controllers.',
-    logoText: 'Danfoss'
+    logoText: 'Danfoss',
+    logoUrl: '/logos/danfoss.png'
   },
   {
     name: 'Copeland',
     category: 'Scroll & Semi-Hermetic Compressors',
     description: 'The global benchmark for reliable, high-efficiency commercial cooling compressors.',
-    logoText: 'Copeland'
+    logoText: 'Copeland',
+    logoUrl: '/logos/copeland.png'
   },
   {
     name: 'Goodman / Amana',
     category: 'HVAC & Packaged Thermal Systems',
     description: 'Durable packaged and split climate control units for commercial back-of-house utility.',
-    logoText: 'Goodman'
+    logoText: 'Goodman / Amana',
+    logoUrl: '/logos/goodman-amana.png'
   },
   {
     name: 'Daikin',
     category: 'Advanced Inverter Climate Systems',
     description: 'Cutting-edge variable refrigerant flow and heavy-duty cold climate technology.',
-    logoText: 'DAIKIN'
+    logoText: 'DAIKIN',
+    logoUrl: '/logos/daikin.png'
   },
   {
     name: 'Gree / Tosot',
     category: 'Commercial Cooling & Ductless Systems',
     description: 'High-efficiency commercial split refrigeration and targeted temperature zones.',
-    logoText: 'GREE / TOSOT'
+    logoText: 'GREE',
+    logoUrl: '/logos/gree.png'
   }
 ];
 

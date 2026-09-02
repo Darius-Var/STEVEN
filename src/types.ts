@@ -15,6 +15,7 @@ export interface BrandPartner {
   category: string;
   description: string;
   logoText: string;
+  logoUrl?: string;
 }
 
 export interface ServiceAreaLocation {
